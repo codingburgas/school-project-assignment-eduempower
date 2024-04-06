@@ -1,7 +1,7 @@
 <h1 align="center">EduEmpower</h1>
 
 <p align = "center">
- <img height="300" width="350" src = "" alt = "logo">
+ <img height="300" width="550" src = "Logo/Logo.png" alt = "logo">
 </p>
 
 <br>
