@@ -1,4 +1,0 @@
-﻿  main.cpp
-main.obj : error LNK2019: unresolved external symbol _InitWindow referenced in function _main
-vendor\raylib\lib\raylib.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
-bin\Debug-windows-x86\raylibtesting\raylibtesting.exe : fatal error LNK1120: 1 unresolved externals
