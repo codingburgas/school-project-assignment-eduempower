@@ -1,85 +1,48 @@
-﻿/*******************************************************************************************
-*
-*   raylib [shapes] example - Cubic-bezier lines
-*
-*   Example originally created with raylib 1.7, last time updated with raylib 1.7
-*
-*   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
-*   BSD-like license that allows static linking with closed source software
-*
-*   Copyright (c) 2017-2024 Ramon Santamaria (@raysan5)
-*
-********************************************************************************************/
-
+﻿#include <iostream>
 #include "raylib.h"
+#include "raygui.h"
 
-//------------------------------------------------------------------------------------
-// Program main entry point
-//------------------------------------------------------------------------------------
-int main(void)
+int main()
 {
-    // Initialization
-    //--------------------------------------------------------------------------------------
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    const int screenWidth = 1920;
+    const int screenHeight = 1080;
 
-    SetConfigFlags(FLAG_MSAA_4X_HINT);
-    InitWindow(screenWidth, screenHeight, "raylib [shapes] example - cubic-bezier lines");
+    InitWindow(screenWidth, screenHeight, "EduEmpower");
 
-    Vector2 startPoint = { 30, 30 };
-    Vector2 endPoint = { (float)screenWidth - 30, (float)screenHeight - 30 };
-    bool moveStartPoint = false;
-    bool moveEndPoint = false;
+    Texture2D background = LoadTexture("../resources/background_1.png");
 
-    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
-    //--------------------------------------------------------------------------------------
+    Texture2D button1Background = LoadTexture("../resources/button1_background.png");
+    Texture2D button2Background = LoadTexture("../resources/button2_background.png");
+    Texture2D button3Background = LoadTexture("../resources/button3_background.png");
 
-    // Main game loop
-    while (!WindowShouldClose())    // Detect window close button or ESC key
+    const int buttonWidth = 587;
+    const int buttonHeight = 105;
+    const int buttonSpacing = 60;
+
+    const int totalButtonHeight = buttonHeight * 3 + buttonSpacing * 2;
+    const int buttonX = (screenWidth - buttonWidth) / 2;
+    const int buttonYStart = (screenHeight - totalButtonHeight) / 2 + 160;
+
+    while (!WindowShouldClose())
     {
-        // Update
-        //----------------------------------------------------------------------------------
-        Vector2 mouse = GetMousePosition();
-
-        if (CheckCollisionPointCircle(mouse, startPoint, 10.0f) && IsMouseButtonDown(MOUSE_BUTTON_LEFT)) moveStartPoint = true;
-        else if (CheckCollisionPointCircle(mouse, endPoint, 10.0f) && IsMouseButtonDown(MOUSE_BUTTON_LEFT)) moveEndPoint = true;
-
-        if (moveStartPoint)
-        {
-            startPoint = mouse;
-            if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT)) moveStartPoint = false;
-        }
-
-        if (moveEndPoint)
-        {
-            endPoint = mouse;
-            if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT)) moveEndPoint = false;
-        }
-        //----------------------------------------------------------------------------------
-
-        // Draw
-        //----------------------------------------------------------------------------------
         BeginDrawing();
-
         ClearBackground(RAYWHITE);
 
-        DrawText("MOVE START-END POINTS WITH MOUSE", 15, 20, 20, GRAY);
+        DrawTexture(background, 0, 0, WHITE);
 
-        // Draw line Cubic Bezier, in-out interpolation (easing), no control points
-        DrawLineBezier(startPoint, endPoint, 4.0f, BLUE);
-
-        // Draw start-end spline circles with some details
-        DrawCircleV(startPoint, CheckCollisionPointCircle(mouse, startPoint, 10.0f) ? 14 : 8, moveStartPoint ? RED : BLUE);
-        DrawCircleV(endPoint, CheckCollisionPointCircle(mouse, endPoint, 10.0f) ? 14 : 8, moveEndPoint ? RED : BLUE);
+        DrawTexture(button1Background, buttonX, buttonYStart, WHITE);
+        DrawTexture(button2Background, buttonX, buttonYStart + buttonHeight + buttonSpacing, WHITE);
+        DrawTexture(button3Background, buttonX, buttonYStart + (buttonHeight + buttonSpacing) * 2, WHITE);
 
         EndDrawing();
-        //----------------------------------------------------------------------------------
     }
 
-    // De-Initialization
-    //--------------------------------------------------------------------------------------
-    CloseWindow();        // Close window and OpenGL context
-    //--------------------------------------------------------------------------------------
+    UnloadTexture(background);
+    UnloadTexture(button1Background);
+    UnloadTexture(button2Background);
+    UnloadTexture(button3Background);
+
+    CloseWindow();
 
     return 0;
 }
