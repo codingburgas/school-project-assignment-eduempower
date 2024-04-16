@@ -6,6 +6,7 @@ int mainMenu() {
     const int screenHeight = 1080;
 
     InitWindow(screenWidth, screenHeight, "EduEmpower");
+    SetTargetFPS(30);
 
     Texture2D background = LoadTexture("../resources/background_1.png");
 

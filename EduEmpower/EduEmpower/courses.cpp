@@ -10,7 +10,7 @@ void Courses() {
 	Texture2D background = LoadTexture("../resources/background_courses.png");
 
 	Texture2D physicsButton = LoadTexture("../resources/physics_button.png");
-	Texture2D mathsButton = LoadTexture("../resources/physics_button.png");
+	Texture2D mathsButton = LoadTexture("../resources/maths_button.png");
 	Texture2D programmingButton = LoadTexture("../resources/physics_button.png");
 
 	Texture2D examsText = LoadTexture("../resources/exams_text.png");
