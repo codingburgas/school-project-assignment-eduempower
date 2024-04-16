@@ -130,7 +130,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="EduEmpower.cpp" />
+    <ClCompile Include="courses.cpp" />
+    <ClCompile Include="courses.h" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainMenu.cpp" />
+    <ClCompile Include="mainMenu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="globalVariables.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
