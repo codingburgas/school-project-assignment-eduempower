@@ -136,9 +136,6 @@
     <ClCompile Include="mainMenu.cpp" />
     <ClCompile Include="mainMenu.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="globalVariables.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

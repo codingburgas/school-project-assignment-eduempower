@@ -3,4 +3,4 @@
 #include "raylib.h"
 #include "raygui.h"
 
-void courses();
+void Courses();

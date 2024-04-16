@@ -1,6 +1,7 @@
 #include "mainMenu.h"
+#include "courses.h"
 
-int firstPage() {
+int mainMenu() {
     const int screenWidth = 1920;
     const int screenHeight = 1080;
 
@@ -30,6 +31,18 @@ int firstPage() {
         DrawTexture(button1Background, buttonX, buttonYStart, WHITE);
         DrawTexture(button2Background, buttonX, buttonYStart + buttonHeight + buttonSpacing, WHITE);
         DrawTexture(button3Background, buttonX, buttonYStart + (buttonHeight + buttonSpacing) * 2, WHITE);
+
+        if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { buttonX, buttonYStart, buttonWidth, buttonHeight })) {
+        	CloseWindow();
+            Courses();
+        }
+        else if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { buttonX, buttonYStart + buttonHeight + buttonSpacing, buttonWidth, buttonHeight })) {
+			CloseWindow();
+			Courses();
+		}
+        else if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { buttonX, buttonYStart + (buttonHeight + buttonSpacing) * 2, buttonWidth, buttonHeight })) {
+			CloseWindow();
+		}
 
         EndDrawing();
     }
