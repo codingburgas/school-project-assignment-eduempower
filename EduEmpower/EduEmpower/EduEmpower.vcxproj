@@ -136,6 +136,14 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainMenu.cpp" />
     <ClCompile Include="mainMenu.h" />
+    <ClCompile Include="mathMenu.cpp" />
+    <ClCompile Include="physicsMenu.cpp" />
+    <ClCompile Include="progMenu.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mathMenu.h" />
+    <ClInclude Include="physicsMenu.h" />
+    <ClInclude Include="progMenu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

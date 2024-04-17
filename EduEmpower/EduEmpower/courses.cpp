@@ -1,6 +1,9 @@
 #include "courses.h"
+#include "mathMenu.h"
+#include "progMenu.h"
+#include "physicsMenu.h"
 
-void Courses() {
+int Courses() {
 	const int screenWidth = 1920;
 	const int screenHeight = 1080;
 
@@ -21,9 +24,9 @@ void Courses() {
 	const int buttonHeight = 370;
 	const int buttonSpacing = 200;
 
-	int yOffset = 80;
-	int xOffset = 1150;
-	int buttonGap = 120;
+	int yOffset = 80; // 80 pixels from the top of the screen to the text buttons
+	int xOffset = 1150; // 1150 pixels from the left of the screen to the text buttons
+	int buttonGap = 120; // 120 pixels between each text button
 
 	while (!WindowShouldClose()) {
 		BeginDrawing();
@@ -33,6 +36,20 @@ void Courses() {
 		DrawTexture(physicsButton, (screenWidth - buttonWidth) / 2 - buttonWidth - buttonSpacing, (screenHeight - buttonHeight) / 2, WHITE);
 		DrawTexture(mathsButton, (screenWidth - buttonWidth) / 2, (screenHeight - buttonHeight) / 2 + 140, WHITE);
 		DrawTexture(programmingButton, (screenWidth - buttonWidth) / 2 + buttonWidth + buttonSpacing, (screenHeight - buttonHeight) / 2, WHITE);
+
+		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (screenWidth - buttonWidth) / 2 - buttonWidth - buttonSpacing, (screenHeight - buttonHeight) / 2, buttonWidth, buttonHeight })) {
+			CloseWindow();
+			physicsMenu();
+		}
+		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (screenWidth - buttonWidth) / 2, (screenHeight - buttonHeight) / 2 + 140, buttonWidth, buttonHeight })) {
+			CloseWindow();
+			mathMenu();
+		}
+		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (screenWidth - buttonWidth) / 2 + buttonWidth + buttonSpacing, (screenHeight - buttonHeight) / 2, buttonWidth, buttonHeight })) {
+			CloseWindow();
+			progMenu();
+		}
+
 
 		DrawTexture(examsText, xOffset, yOffset, WHITE);
 		DrawTexture(gradesText, xOffset + examsText.width + buttonGap, yOffset, WHITE);
@@ -48,4 +65,8 @@ void Courses() {
 	UnloadTexture(examsText);
 	UnloadTexture(gradesText);
 	UnloadTexture(exitText);
+
+	CloseWindow();
+
+	return 0;
 }

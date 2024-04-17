@@ -39,5 +39,25 @@
     <ClCompile Include="mainMenu.cpp">
       <Filter>Presentation\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mathMenu.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="physicsMenu.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="progMenu.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mathMenu.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="progMenu.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsMenu.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

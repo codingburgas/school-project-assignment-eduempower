@@ -3,4 +3,4 @@
 #include "raylib.h"
 #include "raygui.h"
 
-int Courses();
+int mathMenu();

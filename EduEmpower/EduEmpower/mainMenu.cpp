@@ -37,11 +37,11 @@ int mainMenu() {
         	CloseWindow();
             Courses();
         }
-        else if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { buttonX, buttonYStart + buttonHeight + buttonSpacing, buttonWidth, buttonHeight })) {
+        if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { buttonX, buttonYStart + buttonHeight + buttonSpacing, buttonWidth, buttonHeight })) {
 			CloseWindow();
 			Courses();
 		}
-        else if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { buttonX, buttonYStart + (buttonHeight + buttonSpacing) * 2, buttonWidth, buttonHeight })) {
+        if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { buttonX, buttonYStart + (buttonHeight + buttonSpacing) * 2, buttonWidth, buttonHeight })) {
 			CloseWindow();
 		}
 
