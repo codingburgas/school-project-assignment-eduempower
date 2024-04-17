@@ -1,34 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
+    <Filter Include="Presentation">
+      <UniqueIdentifier>{0100899a-4e21-4727-b691-41eaad62cc48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presentation\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Presentation\Source Files">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
+    <Filter Include="Presentation\Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="BisunessLogicLayer">
+      <UniqueIdentifier>{86a12a6d-dc9e-4d58-9b63-333e20fb3acd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataAccessLayer">
+      <UniqueIdentifier>{a8114fe4-9586-400e-b26c-93ae2a0c7a3f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Presentation\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mainMenu.h">
-      <Filter>Header Files</Filter>
+      <Filter>Presentation\Header Files</Filter>
     </ClCompile>
     <ClCompile Include="courses.h">
-      <Filter>Header Files</Filter>
+      <Filter>Presentation\Header Files</Filter>
     </ClCompile>
     <ClCompile Include="courses.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Presentation\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mainMenu.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Presentation\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
