@@ -57,6 +57,9 @@
     <ClCompile Include="physicsLesson1.cpp">
       <Filter>Presentation\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Question.cpp">
+      <Filter>BisunessLogicLayer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mathMenu.h">

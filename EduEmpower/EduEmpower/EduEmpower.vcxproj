@@ -142,6 +142,7 @@
     <ClCompile Include="physicsTest1.cpp" />
     <ClCompile Include="physicsTest2.cpp" />
     <ClCompile Include="progMenu.cpp" />
+    <ClCompile Include="Question.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mathMenu.h" />
