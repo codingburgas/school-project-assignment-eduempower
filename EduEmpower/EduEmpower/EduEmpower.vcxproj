@@ -137,6 +137,7 @@
     <ClCompile Include="mainMenu.cpp" />
     <ClCompile Include="mainMenu.h" />
     <ClCompile Include="mathMenu.cpp" />
+    <ClCompile Include="physicsLesson1.cpp" />
     <ClCompile Include="physicsMenu.cpp" />
     <ClCompile Include="physicsTest1.cpp" />
     <ClCompile Include="physicsTest2.cpp" />
@@ -144,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mathMenu.h" />
+    <ClInclude Include="physicsLesson1.h" />
     <ClInclude Include="physicsMenu.h" />
     <ClInclude Include="physicsTest1.h" />
     <ClInclude Include="physicsTest2.h" />
