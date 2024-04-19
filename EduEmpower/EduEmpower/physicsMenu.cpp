@@ -1,4 +1,6 @@
 #include "physicsMenu.h"
+#include "physicsTest1.h"
+#include "physicsTest2.h"
 
 int physicsMenu() {
     const int screenWidth = 1920;
@@ -96,12 +98,12 @@ int physicsMenu() {
 
         if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (float)(xOffsetOthers - 1590), (float)(yOffsetLesson1 + 340), (float)test1ButtonImg.width, (float)test1ButtonImg.height })) {
             CloseWindow();
-            InitWindow(screenWidth, screenHeight, "Test 1");
+            physicsTest1();
         }
 
         if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (float)(xOffsetOthers - 1590), (float)(yOffsetLesson2 + 360), (float)test2ButtonImg.width, (float)test2ButtonImg.height })) {
             CloseWindow();
-            InitWindow(screenWidth, screenHeight, "Test 2");
+            physicsTest2();
         }
 
         EndDrawing();
