@@ -150,6 +150,7 @@
     <ClInclude Include="physicsTest1.h" />
     <ClInclude Include="physicsTest2.h" />
     <ClInclude Include="progMenu.h" />
+    <ClInclude Include="Question.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

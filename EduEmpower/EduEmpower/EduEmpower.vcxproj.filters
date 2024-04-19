@@ -54,6 +54,9 @@
     <ClCompile Include="physicsTest2.cpp">
       <Filter>Presentation\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="physicsLesson1.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mathMenu.h">
@@ -70,6 +73,12 @@
     </ClInclude>
     <ClInclude Include="physicsTest2.h">
       <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsLesson1.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Question.h">
+      <Filter>DataAccessLayer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
