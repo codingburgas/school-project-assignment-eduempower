@@ -50,6 +50,18 @@ int Courses() {
 			progMenu();
 		}
 
+		if (CheckCollisionPointRec(GetMousePosition(), { (screenWidth - buttonWidth) / 2 - buttonWidth - buttonSpacing, (screenHeight - buttonHeight) / 2, buttonWidth, buttonHeight })) {
+			SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+		}
+		else if (CheckCollisionPointRec(GetMousePosition(), { (screenWidth - buttonWidth) / 2, (screenHeight - buttonHeight) / 2 + 140, buttonWidth, buttonHeight })) {
+			SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+		}
+		else if (CheckCollisionPointRec(GetMousePosition(), { (screenWidth - buttonWidth) / 2 + buttonWidth + buttonSpacing, (screenHeight - buttonHeight) / 2, buttonWidth, buttonHeight })) {
+			SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+		}
+		else {
+			SetMouseCursor(MOUSE_CURSOR_DEFAULT);
+		}
 
 		DrawTexture(examsText, xOffset, yOffset, WHITE);
 		DrawTexture(gradesText, xOffset + examsText.width + buttonGap, yOffset, WHITE);

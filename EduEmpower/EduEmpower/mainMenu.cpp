@@ -22,6 +22,10 @@ int mainMenu() {
     const int buttonX = (screenWidth - buttonWidth) / 2;
     const int buttonYStart = (screenHeight - totalButtonHeight) / 2 + 160;
 
+    Rectangle button1Rec = { buttonX, buttonYStart, buttonWidth, buttonHeight };
+    Rectangle button2Rec = { buttonX, buttonYStart + buttonHeight + buttonSpacing, buttonWidth, buttonHeight };
+    Rectangle button3Rec = { buttonX, buttonYStart + (buttonHeight + buttonSpacing) * 2, buttonWidth, buttonHeight };
+
     while (!WindowShouldClose())
     {
         BeginDrawing();
@@ -34,16 +38,33 @@ int mainMenu() {
         DrawTexture(button3Background, buttonX, buttonYStart + (buttonHeight + buttonSpacing) * 2, WHITE);
 
         if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { buttonX, buttonYStart, buttonWidth, buttonHeight })) {
-        	CloseWindow();
+            CloseWindow();
             Courses();
         }
         if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { buttonX, buttonYStart + buttonHeight + buttonSpacing, buttonWidth, buttonHeight })) {
-			CloseWindow();
-			Courses();
-		}
+            CloseWindow();
+            Courses();
+        }
         if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { buttonX, buttonYStart + (buttonHeight + buttonSpacing) * 2, buttonWidth, buttonHeight })) {
-			CloseWindow();
-		}
+            CloseWindow();
+        }
+
+        if (CheckCollisionPointRec(GetMousePosition(), button1Rec))
+        {
+            SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+        }
+        else if (CheckCollisionPointRec(GetMousePosition(), button2Rec))
+        {
+            SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+        }
+        else if (CheckCollisionPointRec(GetMousePosition(), button3Rec))
+        {
+            SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+        }
+        else
+        {
+            SetMouseCursor(MOUSE_CURSOR_DEFAULT);
+        }
 
         EndDrawing();
     }
