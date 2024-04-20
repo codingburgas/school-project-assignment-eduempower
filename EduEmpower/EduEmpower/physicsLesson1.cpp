@@ -9,7 +9,7 @@ void physicsLesson1()
 	InitWindow(screenWidth, screenHeight, "EduEmpoyer");
 	SetTargetFPS(30);
 
-	Texture2D background = LoadTexture("../resources/physicsLesson1.png");
+	Texture2D background = LoadTexture("../resources/bg-physics-lesson-1.png");
 
 	Texture2D physicsButtonImg = LoadTexture("../resources/Physics.png");
 	Texture2D lesson1ButtonImg = LoadTexture("../resources/Lesson1.png");
