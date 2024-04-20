@@ -1,8 +1,8 @@
-﻿#include "mainMenu.h"
+﻿#include "homePage.h"
 #include "courses.h"
 #include "physicsMenu.h"
 #include "physicsLesson1.h"
 
 int main(){
-    physicsLesson1();
+    homePage();
 }

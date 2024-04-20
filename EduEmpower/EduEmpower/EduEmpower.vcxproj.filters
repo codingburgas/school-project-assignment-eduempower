@@ -27,7 +27,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Presentation\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mainMenu.h">
+    <ClCompile Include="homePage.h">
       <Filter>Presentation\Header Files</Filter>
     </ClCompile>
     <ClCompile Include="courses.h">
@@ -36,7 +36,7 @@
     <ClCompile Include="courses.cpp">
       <Filter>Presentation\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mainMenu.cpp">
+    <ClCompile Include="homePage.cpp">
       <Filter>Presentation\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mathMenu.cpp">

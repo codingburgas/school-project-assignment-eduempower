@@ -134,8 +134,8 @@
     <ClCompile Include="courses.cpp" />
     <ClCompile Include="courses.h" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="mainMenu.cpp" />
-    <ClCompile Include="mainMenu.h" />
+    <ClCompile Include="homePage.cpp" />
+    <ClCompile Include="homePage.h" />
     <ClCompile Include="mathMenu.cpp" />
     <ClCompile Include="physicsLesson1.cpp" />
     <ClCompile Include="physicsMenu.cpp" />

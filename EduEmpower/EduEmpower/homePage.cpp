@@ -1,7 +1,7 @@
-#include "mainMenu.h"
+#include "homePage.h"
 #include "courses.h"
 
-int mainMenu() {
+void homePage() {
     const int screenWidth = 1920;
     const int screenHeight = 1080;
 
@@ -75,6 +75,4 @@ int mainMenu() {
     UnloadTexture(button3Background);
 
     CloseWindow();
-
-    return 0;
 }

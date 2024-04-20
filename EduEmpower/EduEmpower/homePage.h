@@ -2,4 +2,4 @@
 #include "raylib.h"
 #include "raygui.h"
 
-int mainMenu();
+void homePage();
