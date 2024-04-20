@@ -27,7 +27,7 @@ int physicsMenu() {
     int xOffsetPhysics = 145; // Top left corner
     int xOffsetOthers = screenWidth - courseButtonImg.width - 50; // Top right corner
     int buttonGap = 20;
-    int lessonButtonGap = 30; // Gap between lesson buttons
+    int lessonButtonGap = 40; // Gap between lesson buttons
 
     // Position of navigation buttons
     int courseButtonX = screenWidth - courseButtonImg.width - 50;
@@ -35,7 +35,7 @@ int physicsMenu() {
     int gradesButtonX = homeworkButtonX - homeworkButtonImg.width - buttonGap;
 
     int xOffsetLessons = xOffsetPhysics + physicsButtonImg.width + buttonGap - 230; // Right of physics button
-    int yOffsetLesson1 = yOffset + physicsButtonImg.height + buttonGap + 130;
+    int yOffsetLesson1 = yOffset + physicsButtonImg.height + buttonGap + 150;
     int yOffsetLesson2 = yOffsetLesson1 + lesson1ButtonImg.height + lessonButtonGap;
     int yOffsetLesson3 = yOffsetLesson2 + lesson2ButtonImg.height + lessonButtonGap;
 
@@ -54,7 +54,6 @@ int physicsMenu() {
 
         DrawTexture(lesson1ButtonImg, xOffsetLessons, yOffsetLesson1, WHITE);
         DrawTexture(lesson2ButtonImg, xOffsetLessons, yOffsetLesson2, WHITE);
-        DrawTexture(lesson3ButtonImg, xOffsetLessons, yOffsetLesson3, WHITE);
 
         DrawTexture(test1ButtonImg, xOffsetOthers - 1590, yOffsetLesson1 + 340, WHITE);
         DrawTexture(test2ButtonImg, xOffsetOthers - 1590, yOffsetLesson2 + 360, WHITE);
@@ -88,11 +87,6 @@ int physicsMenu() {
             physicsLesson2();
         }
 
-        if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (float)xOffsetLessons, (float)yOffsetLesson3, (float)lesson3ButtonImg.width, (float)lesson3ButtonImg.height })) {
-            CloseWindow();
-            InitWindow(screenWidth, screenHeight, "Lesson 3");
-        }
-
         if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (float)(xOffsetOthers - 1590), (float)(yOffsetLesson1 + 340), (float)test1ButtonImg.width, (float)test1ButtonImg.height })) {
             CloseWindow();
             physicsTest1();
@@ -117,5 +111,7 @@ int physicsMenu() {
     UnloadTexture(test1ButtonImg);
     UnloadTexture(test2ButtonImg);
     UnloadTexture(finalTestButtonImg);
+
+    CloseWindow();
     return 0;
 }
