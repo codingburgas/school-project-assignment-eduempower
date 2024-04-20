@@ -14,6 +14,10 @@ void homePage() {
     Texture2D button2Background = LoadTexture("../resources/button2_background.png");
     Texture2D button3Background = LoadTexture("../resources/button3_background.png");
 
+    Texture2D hoverButton1Background = LoadTexture("../resources/hoverButton1_background.png");
+    Texture2D hoverButton2Background = LoadTexture("../resources/hoverButton2_background.png");
+    Texture2D hoverButton3Background = LoadTexture("../resources/hoverButton3_background.png");
+
     const int buttonWidth = 587;
     const int buttonHeight = 105;
     const int buttonSpacing = 60;
@@ -52,14 +56,17 @@ void homePage() {
         if (CheckCollisionPointRec(GetMousePosition(), button1Rec))
         {
             SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+            DrawTexture(hoverButton1Background, buttonX, buttonYStart, WHITE);
         }
         else if (CheckCollisionPointRec(GetMousePosition(), button2Rec))
         {
             SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+            DrawTexture(hoverButton2Background, buttonX, buttonYStart + buttonHeight + buttonSpacing, WHITE);
         }
         else if (CheckCollisionPointRec(GetMousePosition(), button3Rec))
         {
             SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+            DrawTexture(hoverButton3Background, buttonX, buttonYStart + (buttonHeight + buttonSpacing) * 2, WHITE);
         }
         else
         {
