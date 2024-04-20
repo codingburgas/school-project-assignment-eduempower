@@ -1,7 +1,4 @@
 #include "physicsMenu.h"
-#include "physicsTest1.h"
-#include "physicsTest2.h"
-#include "physicsLesson1.h"
 
 int physicsMenu() {
     const int screenWidth = 1920;
@@ -88,8 +85,7 @@ int physicsMenu() {
         }
 
         if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (float)xOffsetLessons, (float)yOffsetLesson2, (float)lesson2ButtonImg.width, (float)lesson2ButtonImg.height })) {
-            CloseWindow();
-            InitWindow(screenWidth, screenHeight, "Lesson 2");
+            physicsLesson2();
         }
 
         if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (float)xOffsetLessons, (float)yOffsetLesson3, (float)lesson3ButtonImg.width, (float)lesson3ButtonImg.height })) {
@@ -121,7 +117,5 @@ int physicsMenu() {
     UnloadTexture(test1ButtonImg);
     UnloadTexture(test2ButtonImg);
     UnloadTexture(finalTestButtonImg);
-
-    CloseWindow();
     return 0;
 }

@@ -1,7 +1,4 @@
 #include "courses.h"
-#include "mathMenu.h"
-#include "progMenu.h"
-#include "physicsMenu.h"
 
 int Courses() {
 	const int screenWidth = 1920;
@@ -77,8 +74,6 @@ int Courses() {
 	UnloadTexture(examsText);
 	UnloadTexture(gradesText);
 	UnloadTexture(exitText);
-
-	CloseWindow();
 
 	return 0;
 }

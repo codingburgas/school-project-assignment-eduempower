@@ -60,6 +60,9 @@
     <ClCompile Include="Question.cpp">
       <Filter>BisunessLogicLayer</Filter>
     </ClCompile>
+    <ClCompile Include="physicsLesson2.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mathMenu.h">
@@ -82,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="Question.h">
       <Filter>DataAccessLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="physicsLesson2.h">
+      <Filter>Presentation\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

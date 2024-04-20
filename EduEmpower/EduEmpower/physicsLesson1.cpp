@@ -61,11 +61,6 @@ void physicsLesson1()
 			SetMouseCursor(MOUSE_CURSOR_DEFAULT);
 		}
 
-		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (float)xOffsetPhysics, (float)yOffset, (float)physicsButtonImg.width, (float)physicsButtonImg.height })) {
-			CloseWindow();
-			physicsMenu();
-		}
-
 		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (float)xOffsetLessons, (float)yOffsetLesson1, (float)lesson1ButtonImg.width, (float)lesson1ButtonImg.height })) {
 			CloseWindow();
 			physicsLesson1();
@@ -73,7 +68,7 @@ void physicsLesson1()
 
 		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (float)xOffsetLessons, (float)yOffsetLesson2, (float)lesson2ButtonImg.width, (float)lesson2ButtonImg.height })) {
 			CloseWindow();
-			InitWindow(screenWidth, screenHeight, "Lesson 2");
+			physicsLesson2();
 		}
 
 		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (float)xOffsetLessons, (float)yOffsetLesson3, (float)lesson3ButtonImg.width, (float)lesson3ButtonImg.height })) {
@@ -92,6 +87,4 @@ void physicsLesson1()
 		}
 		EndDrawing();
 	}
-
-	CloseWindow();
 }

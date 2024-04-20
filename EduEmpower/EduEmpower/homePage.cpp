@@ -1,5 +1,4 @@
 #include "homePage.h"
-#include "courses.h"
 
 void homePage() {
     const int screenWidth = 1920;
