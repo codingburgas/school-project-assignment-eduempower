@@ -63,6 +63,30 @@
     <ClCompile Include="physicsLesson2.cpp">
       <Filter>Presentation\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mathLesson1.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mathLesson2.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mathTest1.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mathTest2.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="progLesson1.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="progLesson2.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="progTest1.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="progTest2.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mathMenu.h">
@@ -87,6 +111,30 @@
       <Filter>DataAccessLayer</Filter>
     </ClInclude>
     <ClInclude Include="physicsLesson2.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mathLesson1.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mathLesson2.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mathTest1.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mathTest2.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="progLesson1.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="progLesson2.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="progTest1.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="progTest2.h">
       <Filter>Presentation\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
