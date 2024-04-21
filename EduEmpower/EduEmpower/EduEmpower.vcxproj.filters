@@ -39,6 +39,9 @@
     <ClCompile Include="homePage.cpp">
       <Filter>Presentation\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mathMenu.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="physicsMenu.cpp">
       <Filter>Presentation\Source Files</Filter>
     </ClCompile>
@@ -60,49 +63,9 @@
     <ClCompile Include="physicsLesson2.cpp">
       <Filter>Presentation\Source Files</Filter>
     </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="mathsMenu.cpp">
-      <Filter>Presentation\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mathsLesson2.cpp">
-      <Filter>Presentation\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mathsTest1.cpp">
-      <Filter>Presentation\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mathsTest2.cpp">
-      <Filter>Presentation\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mathsLesson1.cpp">
-=======
-    <ClCompile Include="mathLesson1.cpp">
-      <Filter>Presentation\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mathLesson2.cpp">
-      <Filter>Presentation\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mathTest1.cpp">
-      <Filter>Presentation\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mathTest2.cpp">
-      <Filter>Presentation\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="progLesson1.cpp">
-      <Filter>Presentation\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="progLesson2.cpp">
-      <Filter>Presentation\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="progTest1.cpp">
-      <Filter>Presentation\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="progTest2.cpp">
->>>>>>> b8963f3699c1d6a702e4c9b6d8a491b7413b4e81
-      <Filter>Presentation\Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mathsMenu.h">
+    <ClInclude Include="mathMenu.h">
       <Filter>Presentation\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="progMenu.h">
@@ -124,43 +87,6 @@
       <Filter>DataAccessLayer</Filter>
     </ClInclude>
     <ClInclude Include="physicsLesson2.h">
-      <Filter>Presentation\Header Files</Filter>
-    </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="mathsLesson1.h">
-      <Filter>Presentation\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mathsLesson2.h">
-      <Filter>Presentation\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mathsTest1.h">
-      <Filter>Presentation\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mathsTest2.h">
-=======
-    <ClInclude Include="mathLesson1.h">
-      <Filter>Presentation\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mathLesson2.h">
-      <Filter>Presentation\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mathTest1.h">
-      <Filter>Presentation\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mathTest2.h">
-      <Filter>Presentation\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="progLesson1.h">
-      <Filter>Presentation\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="progLesson2.h">
-      <Filter>Presentation\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="progTest1.h">
-      <Filter>Presentation\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="progTest2.h">
->>>>>>> b8963f3699c1d6a702e4c9b6d8a491b7413b4e81
       <Filter>Presentation\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

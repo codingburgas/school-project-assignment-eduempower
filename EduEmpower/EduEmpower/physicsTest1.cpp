@@ -82,6 +82,8 @@ void physicsTest1() {
             else if (CheckCollisionPointRec(mousePos, { (float)(xOffsetOthers - 1590), (float)(yOffsetLesson2 + 380), (float)finalTestButtonImg.width, (float)finalTestButtonImg.height })) {
                 CloseWindow();
 				// physicsFinalTest();
+
+                //neshto
             }
         }
 
