@@ -24,7 +24,7 @@ int mathMenu() {
 	Texture2D finalTestButtonImg = LoadTexture("../resources/finalTest.png");
 
 	int yOffset = 60;
-	int xOffsetPhysics = 145; // Top left corner
+	int xOffsetMathematics = 110; // Top left corner
 	int xOffsetOthers = screenWidth - courseButtonImg.width - 50; // Top right corner
 	int buttonGap = 20;
 	int lessonButtonGap = 40; // Gap between lesson buttons
@@ -34,18 +34,18 @@ int mathMenu() {
 	int homeworkButtonX = courseButtonX - courseButtonImg.width - buttonGap;
 	int gradesButtonX = homeworkButtonX - homeworkButtonImg.width - buttonGap;
 
-	int xOffsetLessons = xOffsetPhysics + mathematicsButtonImg.width + buttonGap - 230; // Right of physics button
-	int yOffsetLesson1 = yOffset + mathematicsButtonImg.height + buttonGap + 150;
+	int xOffsetLessons = xOffsetMathematics + mathematicsButtonImg.width + buttonGap - 260; // Right of physics button
+	int yOffsetLesson1 = yOffset + mathematicsButtonImg.height + buttonGap + 180;
 	int yOffsetLesson2 = yOffsetLesson1 + lesson1ButtonImg.height + lessonButtonGap;
 	int yOffsetLesson3 = yOffsetLesson2 + lesson2ButtonImg.height + lessonButtonGap;
 
     while (!WindowShouldClose()) {
         BeginDrawing();
-        ClearBackground(RAYWHITE);
+        ClearBackground(BLACK);
 
         DrawTexture(background, 0, 0, WHITE);
 
-        DrawTexture(mathematicsButtonImg, xOffsetPhysics, yOffset, WHITE);
+        DrawTexture(mathematicsButtonImg, xOffsetMathematics, yOffset, WHITE);
 
         // Logical error: right now the homeworkTextButton is overlapping the gradesTextButton
         DrawTexture(courseButtonImg, courseButtonX, yOffset, WHITE);
@@ -58,7 +58,7 @@ int mathMenu() {
         DrawTexture(test1ButtonImg, xOffsetOthers - 1590, yOffsetLesson1 + 340, WHITE);
         DrawTexture(test2ButtonImg, xOffsetOthers - 1590, yOffsetLesson2 + 340, WHITE);
 
-        if (CheckCollisionPointRec(GetMousePosition(), { (float)xOffsetPhysics, (float)yOffset, (float)mathematicsButtonImg.width, (float)mathematicsButtonImg.height }) ||
+        if (CheckCollisionPointRec(GetMousePosition(), { (float)xOffsetMathematics, (float)yOffset, (float)mathematicsButtonImg.width, (float)mathematicsButtonImg.height }) ||
             CheckCollisionPointRec(GetMousePosition(), { (float)courseButtonX, (float)yOffset, (float)courseButtonImg.width, (float)courseButtonImg.height }) ||
             CheckCollisionPointRec(GetMousePosition(), { (float)homeworkButtonX, (float)yOffset, (float)homeworkButtonImg.width, (float)homeworkButtonImg.height }) ||
             CheckCollisionPointRec(GetMousePosition(), { (float)gradesButtonX, (float)yOffset, (float)gradesButtonImg.width, (float)gradesButtonImg.height }) ||
@@ -67,13 +67,14 @@ int mathMenu() {
             CheckCollisionPointRec(GetMousePosition(), { (float)xOffsetLessons, (float)yOffsetLesson3, (float)lesson3ButtonImg.width, (float)lesson3ButtonImg.height }) ||
             CheckCollisionPointRec(GetMousePosition(), { (float)(xOffsetOthers - 1590), (float)(yOffsetLesson1 + 340), (float)test1ButtonImg.width, (float)test1ButtonImg.height }) ||
             CheckCollisionPointRec(GetMousePosition(), { (float)(xOffsetOthers - 1590), (float)(yOffsetLesson2 + 360), (float)test2ButtonImg.width, (float)test2ButtonImg.height })) {
+
             SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
         }
         else {
             SetMouseCursor(MOUSE_CURSOR_DEFAULT);
         }
 
-        if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (float)xOffsetPhysics, (float)yOffset, (float)mathematicsButtonImg.width, (float)mathematicsButtonImg.height })) {
+        if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), { (float)xOffsetMathematics, (float)yOffset, (float)mathematicsButtonImg.width, (float)mathematicsButtonImg.height })) {
             CloseWindow();
             mathMenu();
         }
