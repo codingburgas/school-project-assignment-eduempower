@@ -11,7 +11,7 @@ int Courses() {
 
 	Texture2D physicsButton = LoadTexture("../resources/physics_button.png");
 	Texture2D mathsButton = LoadTexture("../resources/maths_button.png");
-	Texture2D programmingButton = LoadTexture("../resources/physics_button.png");
+	Texture2D programmingButton = LoadTexture("../resources/programming_button.png");
 
 	Texture2D examsText = LoadTexture("../resources/exams_text.png");
 	Texture2D gradesText = LoadTexture("../resources/grades_text.png");
