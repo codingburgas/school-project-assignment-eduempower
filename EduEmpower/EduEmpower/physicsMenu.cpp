@@ -48,9 +48,9 @@ int physicsMenu() {
         DrawTexture(physicsButtonImg, xOffsetPhysics, yOffset, WHITE);
 
         // Logical error: right now the homeworkTextButton is overlapping the gradesTextButton
-        // DrawTexture(courseButtonImg, courseButtonX, yOffset, WHITE);
+        DrawTexture(courseButtonImg, courseButtonX, yOffset, WHITE);
         // DrawTexture(homeworkButtonImg, homeworkButtonX, yOffset, WHITE);
-        // DrawTexture(gradesButtonImg, gradesButtonX, yOffset, WHITE);
+        DrawTexture(gradesButtonImg, gradesButtonX, yOffset, WHITE);
 
         DrawTexture(lesson1ButtonImg, xOffsetLessons, yOffsetLesson1, WHITE);
         DrawTexture(lesson2ButtonImg, xOffsetLessons, yOffsetLesson2, WHITE);
