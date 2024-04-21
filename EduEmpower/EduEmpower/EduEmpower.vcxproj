@@ -136,7 +136,11 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="homePage.cpp" />
     <ClCompile Include="homePage.h" />
-    <ClCompile Include="mathMenu.cpp" />
+    <ClCompile Include="mathsLesson1.cpp" />
+    <ClCompile Include="mathsLesson2.cpp" />
+    <ClCompile Include="mathsMenu.cpp" />
+    <ClCompile Include="mathsTest1.cpp" />
+    <ClCompile Include="mathsTest2.cpp" />
     <ClCompile Include="physicsLesson1.cpp" />
     <ClCompile Include="physicsLesson2.cpp" />
     <ClCompile Include="physicsMenu.cpp" />
@@ -146,7 +150,11 @@
     <ClCompile Include="Question.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mathMenu.h" />
+    <ClInclude Include="mathsMenu.h" />
+    <ClInclude Include="mathsLesson1.h" />
+    <ClInclude Include="mathsLesson2.h" />
+    <ClInclude Include="mathsTest1.h" />
+    <ClInclude Include="mathsTest2.h" />
     <ClInclude Include="physicsLesson1.h" />
     <ClInclude Include="physicsLesson2.h" />
     <ClInclude Include="physicsMenu.h" />

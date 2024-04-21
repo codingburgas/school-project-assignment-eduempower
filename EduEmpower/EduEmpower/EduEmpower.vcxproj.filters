@@ -39,9 +39,6 @@
     <ClCompile Include="homePage.cpp">
       <Filter>Presentation\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mathMenu.cpp">
-      <Filter>Presentation\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="physicsMenu.cpp">
       <Filter>Presentation\Source Files</Filter>
     </ClCompile>
@@ -63,9 +60,24 @@
     <ClCompile Include="physicsLesson2.cpp">
       <Filter>Presentation\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mathsMenu.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mathsLesson2.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mathsTest1.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mathsTest2.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mathsLesson1.cpp">
+      <Filter>Presentation\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mathMenu.h">
+    <ClInclude Include="mathsMenu.h">
       <Filter>Presentation\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="progMenu.h">
@@ -87,6 +99,18 @@
       <Filter>DataAccessLayer</Filter>
     </ClInclude>
     <ClInclude Include="physicsLesson2.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mathsLesson1.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mathsLesson2.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mathsTest1.h">
+      <Filter>Presentation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mathsTest2.h">
       <Filter>Presentation\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

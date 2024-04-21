@@ -2,7 +2,7 @@
 
 #include "raylib.h"
 #include "raygui.h"
-#include "mathMenu.h"
+#include "mathsMenu.h"
 #include "progMenu.h"
 #include "physicsMenu.h"
 
