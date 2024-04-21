@@ -171,6 +171,7 @@
     <ClInclude Include="progTest1.h" />
     <ClInclude Include="progTest2.h" />
     <ClInclude Include="Question.h" />
+    <ClInclude Include="Score.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

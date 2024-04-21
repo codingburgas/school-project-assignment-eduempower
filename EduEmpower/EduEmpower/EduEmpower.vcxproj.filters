@@ -140,5 +140,8 @@
     <ClInclude Include="AggregatedScore.h">
       <Filter>DataAccessLayer</Filter>
     </ClInclude>
+    <ClInclude Include="Score.h">
+      <Filter>DataAccessLayer</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

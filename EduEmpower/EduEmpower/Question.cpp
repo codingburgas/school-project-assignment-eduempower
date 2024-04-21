@@ -3,7 +3,12 @@
 #include <string>
 #include <cstring>
 #include <vector>
+#include <random>
+#include <unordered_map>
 #include "Question.h"
+#include "AggregatedScore.h"
+#include "Score.h"
+
 
 // Function to calculate the length of a string
 int len(std::string str) {
@@ -81,4 +86,33 @@ std::vector<Question> getAllQuestions(std::string testName)
 		dataFile.close();
 	}
 	return questions;
+}
+float getResultForTest(std::string testName, std::vector<Question> answerQuestions)
+{
+	int score = 0;
+	for (size_t i = 0; i < answerQuestions.size(); i++)
+	{
+		if (answerQuestions[i].answers[answerQuestions[i].rightAnswerIndex] == answerQuestions[i].selectedAnswer)
+		{
+			score++;
+		}
+	}
+
+	std::ofstream file("scores.txt");
+	file << testName << "|" << score;
+	file.close();
+
+	return score / answerQuestions.size();
+}
+
+Question randomPick(const std::vector<Question>& questions) {
+	if (questions.empty()) {
+		throw std::out_of_range("Vector is empty");
+	}
+
+	std::random_device rd; // Obtain a random number from hardware
+	std::uniform_int_distribution<> distr(0, questions.size() - 1); // Define the range
+
+	int index = distr(rd); // Generate random index
+	return questions[index]; // Return the randomly picked question
 }
