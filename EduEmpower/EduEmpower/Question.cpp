@@ -119,7 +119,7 @@ Question randomPick(const std::vector<Question>& questions) {
 	return questions[index]; 
 }
 
-std::vector<Question> getQuestinsForTest(std::string testName, int questisonsNumber)
+std::vector<Question> getQuestionsForTest(std::string testName, int questisonsNumber)
 {
 	std::vector<Question> allQuestions = getAllQuestions(testName);
 	std::vector<Question> pickedQuestions;
@@ -171,4 +171,27 @@ std::vector<AggregatedScore> aggregateScores(const std::vector<Score>& scores) {
 	}
 
 	return aggregatedScores;
+}
+
+std::vector<AggregatedScore> getAllScore()
+{
+	std::vector<Score> scores;
+	std::fstream myFilep;
+	myFilep.open("scores.txt", std::ios::in);
+	if (myFilep.is_open()) {
+		std::string line;
+		while (getline(myFilep, line)) {
+			std::vector<std::string> strings = split(line, '|');
+			if (strings.size() != 2)
+			{
+				break;
+			}
+			Score score;
+			score.testName = strings[0];
+			score.score = stoi(strings[1]);
+			scores.push_back(score);
+		}
+		myFilep.close();
+	}
+	return aggregateScores(scores);
 }
