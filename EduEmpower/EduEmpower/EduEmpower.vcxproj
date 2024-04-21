@@ -136,7 +136,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="homePage.cpp" />
     <ClCompile Include="homePage.h" />
-<<<<<<< HEAD
+>>>>>>> HEAD
     <ClCompile Include="mathsLesson1.cpp" />
     <ClCompile Include="mathsLesson2.cpp" />
     <ClCompile Include="mathsMenu.cpp" />
