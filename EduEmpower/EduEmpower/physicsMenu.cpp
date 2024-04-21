@@ -56,7 +56,7 @@ int physicsMenu() {
         DrawTexture(lesson2ButtonImg, xOffsetLessons, yOffsetLesson2, WHITE);
 
         DrawTexture(test1ButtonImg, xOffsetOthers - 1590, yOffsetLesson1 + 340, WHITE);
-        DrawTexture(test2ButtonImg, xOffsetOthers - 1590, yOffsetLesson2 + 360, WHITE);
+        DrawTexture(test2ButtonImg, xOffsetOthers - 1590, yOffsetLesson2 + 340, WHITE);
 
         if (CheckCollisionPointRec(GetMousePosition(), { (float)xOffsetPhysics, (float)yOffset, (float)physicsButtonImg.width, (float)physicsButtonImg.height }) ||
             CheckCollisionPointRec(GetMousePosition(), { (float)courseButtonX, (float)yOffset, (float)courseButtonImg.width, (float)courseButtonImg.height }) ||
