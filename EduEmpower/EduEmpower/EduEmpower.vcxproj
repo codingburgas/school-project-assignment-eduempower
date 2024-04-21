@@ -136,31 +136,55 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="homePage.cpp" />
     <ClCompile Include="homePage.h" />
+<<<<<<< HEAD
     <ClCompile Include="mathsLesson1.cpp" />
     <ClCompile Include="mathsLesson2.cpp" />
     <ClCompile Include="mathsMenu.cpp" />
     <ClCompile Include="mathsTest1.cpp" />
     <ClCompile Include="mathsTest2.cpp" />
+=======
+    <ClCompile Include="mathLesson1.cpp" />
+    <ClCompile Include="mathLesson2.cpp" />
+    <ClCompile Include="mathMenu.cpp" />
+    <ClCompile Include="mathTest1.cpp" />
+    <ClCompile Include="mathTest2.cpp" />
+>>>>>>> b8963f3699c1d6a702e4c9b6d8a491b7413b4e81
     <ClCompile Include="physicsLesson1.cpp" />
     <ClCompile Include="physicsLesson2.cpp" />
     <ClCompile Include="physicsMenu.cpp" />
     <ClCompile Include="physicsTest1.cpp" />
     <ClCompile Include="physicsTest2.cpp" />
+    <ClCompile Include="progLesson1.cpp" />
+    <ClCompile Include="progLesson2.cpp" />
     <ClCompile Include="progMenu.cpp" />
+    <ClCompile Include="progTest1.cpp" />
+    <ClCompile Include="progTest2.cpp" />
     <ClCompile Include="Question.cpp" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClInclude Include="mathsMenu.h" />
     <ClInclude Include="mathsLesson1.h" />
     <ClInclude Include="mathsLesson2.h" />
     <ClInclude Include="mathsTest1.h" />
     <ClInclude Include="mathsTest2.h" />
+=======
+    <ClInclude Include="mathLesson1.h" />
+    <ClInclude Include="mathLesson2.h" />
+    <ClInclude Include="mathMenu.h" />
+    <ClInclude Include="mathTest1.h" />
+    <ClInclude Include="mathTest2.h" />
+>>>>>>> b8963f3699c1d6a702e4c9b6d8a491b7413b4e81
     <ClInclude Include="physicsLesson1.h" />
     <ClInclude Include="physicsLesson2.h" />
     <ClInclude Include="physicsMenu.h" />
     <ClInclude Include="physicsTest1.h" />
     <ClInclude Include="physicsTest2.h" />
+    <ClInclude Include="progLesson1.h" />
+    <ClInclude Include="progLesson2.h" />
     <ClInclude Include="progMenu.h" />
+    <ClInclude Include="progTest1.h" />
+    <ClInclude Include="progTest2.h" />
     <ClInclude Include="Question.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
