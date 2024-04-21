@@ -109,10 +109,66 @@ Question randomPick(const std::vector<Question>& questions) {
 	if (questions.empty()) {
 		throw std::out_of_range("Vector is empty");
 	}
+	// Obtain a random number from hardware
+	std::random_device rd; 
+	// Define the range
+	std::uniform_int_distribution<> distr(0, questions.size() - 1); 
+	// Generate random index
+	int index = distr(rd);
+	// Return the randomly picked question
+	return questions[index]; 
+}
 
-	std::random_device rd; // Obtain a random number from hardware
-	std::uniform_int_distribution<> distr(0, questions.size() - 1); // Define the range
+std::vector<Question> getQuestinsForTest(std::string testName, int questisonsNumber)
+{
+	std::vector<Question> allQuestions = getAllQuestions(testName);
+	std::vector<Question> pickedQuestions;
+	for (size_t i = 0; i < questisonsNumber; i++)
+	{
+		pickedQuestions.push_back(randomPick(allQuestions));
+	}
+	for (size_t i = 0; i < questisonsNumber; i++)
+	{
+		pickedQuestions[i].questionNumber = i + 1;
+	}
 
-	int index = distr(rd); // Generate random index
-	return questions[index]; // Return the randomly picked question
+	return pickedQuestions;
+}
+std::vector<AggregatedScore> aggregateScores(const std::vector<Score>& scores) {
+	std::unordered_map<std::string, std::pair<float, std::pair<float, float>>> scoreMap;
+
+	// Populate the map with initial values
+	for (const auto& score : scores) {
+		if (scoreMap.find(score.testName) == scoreMap.end()) {
+			scoreMap[score.testName] = { score.score, {score.score, 1} };
+		}
+		else {
+			auto& stats = scoreMap[score.testName];
+			// Sum of scores
+			stats.first += score.score; 
+			// Lowest score
+			stats.second.first = std::min(stats.second.first, score.score); 
+			// Best score
+			stats.second.second = std::max(stats.second.second, score.score); 
+			// Count of scores
+			stats.second.second++; 
+		}
+	}
+
+	std::vector<AggregatedScore> aggregatedScores;
+	for (const auto& pair : scoreMap) {
+		// first klioch a testnam e masiv ot stojnosti
+		const auto& testName = pair.first; 
+		const auto& stats = pair.second;
+
+		AggregatedScore aggregatedScore;
+		aggregatedScore.testName = testName;
+		aggregatedScore.lowest = stats.second.first;
+		aggregatedScore.best = stats.second.second;
+		aggregatedScore.average = stats.first / stats.second.second;
+
+		aggregatedScores.push_back(aggregatedScore);
+	}
+
+	return aggregatedScores;
 }
