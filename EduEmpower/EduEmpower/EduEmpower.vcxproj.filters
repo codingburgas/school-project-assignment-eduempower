@@ -137,5 +137,8 @@
     <ClInclude Include="progTest2.h">
       <Filter>Presentation\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AggregatedScore.h">
+      <Filter>DataAccessLayer</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
