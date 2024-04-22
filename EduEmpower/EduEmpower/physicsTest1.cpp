@@ -14,7 +14,7 @@ void displayQuestion(const Question& question, int x, int y, int fontSize) {
 }
 
 // Function to display radio buttons for selecting answers
-void displayRadioButtons(int x, int y, int selectedAnswer, int questionNumber, int fontSize, bool clickable, int& clickedAnswer) {
+void displayRadioButtons(int x, int y, int selectedAnswer, int questionNumber, int fontSize, bool clickable, int* selectedAnswers) {
     y += 50; // Increase vertical position for radio buttons
     for (size_t i = 0; i < 3; ++i) {
         // Draw radio button
@@ -25,12 +25,12 @@ void displayRadioButtons(int x, int y, int selectedAnswer, int questionNumber, i
         if (clickable && CheckCollisionPointRec(GetMousePosition(), radioBtnRect)) {
             DrawRectangle(radioBtnRect.x, radioBtnRect.y, radioBtnRect.width, radioBtnRect.height, Fade(LIGHTGRAY, 0.5f)); // Highlight when hovered
             if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-                clickedAnswer = i; // Set the clicked answer
+                selectedAnswers[questionNumber] = i; // Set the selected answer for the current question
             }
         }
 
         // If current option is selected, draw a checkmark
-        if (i == selectedAnswer) {
+        if (i == selectedAnswers[questionNumber]) {
             DrawText("X", x + 5, y + i * 50 + 5, fontSize, WHITE);
         }
 
@@ -54,6 +54,7 @@ void physicsTest1() {
 
     std::vector<Question> allQuestions;
 
+    // Adding more questions
     Question q1;
     q1.question = "What is the capital of France?";
     q1.answers = { "Paris", "London", "Berlin" };
@@ -64,9 +65,19 @@ void physicsTest1() {
     q2.answers = { "Jupiter", "Mars", "Saturn" };
     allQuestions.push_back(q2);
 
-    int selectedAnswers[2] = { -1 }; // Initialize selected answers to -1
+    Question q3;
+    q3.question = "What is the boiling point of water in Celsius?";
+    q3.answers = { "100", "0", "50" };
+    allQuestions.push_back(q3);
+
+    Question q4;
+    q4.question = "Who developed the theory of relativity?";
+    q4.answers = { "Albert Einstein", "Isaac Newton", "Stephen Hawking" };
+    allQuestions.push_back(q4);
+
+    // Declare an array to store selected answers for each question
+    int selectedAnswers[4] = { -1 }; // Initialize selected answers to -1
     int currentQuestionIndex = 0;
-    int clickedAnswer = -1; // Store the clicked answer
 
     int buttonWidth = physicsButtonImg.width;
     int buttonHeight = physicsButtonImg.height;
@@ -74,9 +85,10 @@ void physicsTest1() {
     int buttonX = screenWidth - buttonWidth - buttonPadding - 30; // X-coordinate
     int buttonY = buttonPadding + 5; // Y-coordinate
 
-    const int numQuestionsToDisplay = 2; // Display only 2 questions for testing purpose
+    const int numQuestionsToDisplay = 4; // Display all questions
     const int x = 50;
     const int y = 100;
+    const int columnSpacing = 400; // Space between columns
 
     Rectangle physicsButtonRect = { buttonX, buttonY, buttonWidth, buttonHeight };
 
@@ -85,9 +97,7 @@ void physicsTest1() {
         bool isHover = CheckCollisionPointRec(GetMousePosition(), physicsButtonRect);
 
         BeginDrawing();
-        ClearBackground(BLACK); // Changed background color to BLACK
-
-        // Draw background
+        ClearBackground(BLACK);
         DrawTexture(background, 0, 0, WHITE);
 
         // Draw physics button
@@ -106,11 +116,15 @@ void physicsTest1() {
             DrawTexture(physicsButtonImg, buttonX, buttonY, WHITE);
         }
 
+        // Display questions and radio buttons in two columns
         for (int currentQuestionIndex = 0; currentQuestionIndex < numQuestionsToDisplay; currentQuestionIndex++) {
             // Adjust horizontal position for each question
-            int xPos = x + currentQuestionIndex * 800; // Change 800 to desired spacing
-            displayQuestion(allQuestions[currentQuestionIndex], xPos, y, 30); // Increased font size to 30
-            displayRadioButtons(xPos, y, selectedAnswers[currentQuestionIndex], currentQuestionIndex + 1, 20, true, clickedAnswer); // Changed font size to 20 and pass true for clickable
+            int column = currentQuestionIndex % 2; // Column index (0 or 1)
+            int xPos = x + ((column == 0) ? 0 : 350) + column * columnSpacing;
+            int yPos = y + (currentQuestionIndex / 2) * 200; // Y position for the question
+
+            displayQuestion(allQuestions[currentQuestionIndex], xPos, yPos, 30); // Increased font size to 30
+            displayRadioButtons(xPos, yPos, selectedAnswers[currentQuestionIndex], currentQuestionIndex + 1, 20, true, selectedAnswers); // Changed font size to 20 and pass true for clickable
         }
 
         EndDrawing();
@@ -118,6 +132,7 @@ void physicsTest1() {
 
     CloseWindow();
 
-    UnloadTexture(background);
+    UnloadTexture(background);;
     UnloadTexture(physicsButtonImg);
+    UnloadTexture(hover_physicsButtonImg);
 }
