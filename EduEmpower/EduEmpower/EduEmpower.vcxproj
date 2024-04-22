@@ -173,6 +173,9 @@
     <ClInclude Include="Question.h" />
     <ClInclude Include="Score.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="MatTest1.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
