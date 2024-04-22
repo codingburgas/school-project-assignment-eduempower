@@ -123,7 +123,6 @@ void physicsTest1() {
 
     const int numQuestionsToDisplay = 4; // Display all questions
     const int x = 50;
-    const int y = 100;
     const int columnSpacing = 400; // Space between columns
 
     Rectangle physicsButtonRect = { buttonX, buttonY, buttonWidth, buttonHeight };
@@ -166,22 +165,25 @@ void physicsTest1() {
             isButtonPressed = false; // Reset button press flag
         }
 
-        // Display the current question and radio buttons
+        // Display the current questions and radio buttons vertically
         int xPos = x;
-        int yPos = y;
-        displayQuestion(allQuestions[currentQuestionIndex], xPos, yPos, 30); // Increased font size to 30
-        displayRadioButtons(xPos, yPos, selectedAnswers[currentQuestionIndex], currentQuestionIndex + 1, 20, true, selectedAnswers); // Changed font size to 20 and pass true for clickable
+        int yPos = 200; // Start position for the first question, adjusted to be lower
+        for (int i = currentQuestionIndex; i < currentQuestionIndex + 2 && i < allQuestions.size(); i++) {
+            displayQuestion(allQuestions[i], xPos, yPos, 30); // Increased font size to 30
+            displayRadioButtons(xPos, yPos, selectedAnswers[i], i + 1, 20, true, selectedAnswers); // Changed font size to 20 and pass true for clickable
 
-        // Display index of the current question
-        DrawText(TextFormat("Question %d / %d", currentQuestionIndex + 1, allQuestions.size()), screenWidth - 200, screenHeight - 50, 20, WHITE);
+            yPos += 500; // Increase vertical position for the next question, adjusted to move both questions lower
+        }
+
+        // Display index of the current questions
+        DrawText(TextFormat("Questions %d to %d / %d", currentQuestionIndex + 1, std::min(currentQuestionIndex + 2, static_cast<int>(allQuestions.size())), allQuestions.size()), screenWidth - 250, screenHeight - 50, 20, WHITE);
 
         EndDrawing();
     }
 
-
     CloseWindow();
 
-    UnloadTexture(background);;
+    UnloadTexture(background);
     UnloadTexture(physicsButtonImg);
     UnloadTexture(hover_physicsButtonImg);
 }
