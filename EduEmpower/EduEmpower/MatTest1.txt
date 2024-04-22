@@ -1,0 +1,10 @@
+1.|Which aspect of a quadratic inequality indicates the vertical stretch or compression of the parabola?|Coefficient "a"|Coefficient "b"|Coefficient "c"|0
+2.|How do quadratic inequalities involving absolute values differ from standard quadratic inequalities?|They have two separate parabolas|They always have complex solutions|They involve additional restrictions on the variable|0
+3.|What does coefficient "b" do in a quadratic inequality?|Stretches the parabola|Shifts horizontally|Shifts vertically|2
+4.|What does a positive coefficient "a" indicate about the parabola's opening direction in a quadratic inequality?|Downward|Upward|Horizontal|1
+5.|What role does the discriminant play in a quadratic inequality?|Determines number of solutions|Positions the vertex|Widens the parabola|0
+6.|What do shaded regions represent in the graphical solution of a quadratic inequality?|Non-solution intervals|Solution intervals|Intersection points|1
+7.|What effect does the constant term "c" have on a quadratic inequality?|Shifts vertically|Shifts horizontally|Widens the parabola|0
+8.|What does the midpoint formula contribute to solving quadratic inequalities?|Locates the x-coordinate of the vertex|None of the above|Determines the parabola's width|1
+9.|Why is factoring a useful technique in solving quadratic inequalities algebraically?|Simplifies the inequality|Determines the vertex|Identifies solutions directly|2
+10.|What purpose does the midpoint formula serve when solving quadratic inequalities?|It locates the x-coordinate of the vertex|It helps identify solutions within intervals|It determines the parabola's width|1
