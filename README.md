@@ -44,7 +44,7 @@
   </ul> 
 <h4>Presenting</h4>
   <ul>    
-    <li><a href="">Presentation</a></li>
+    <li><a href="Documentation/EduEmpower_presentation.pptx">Presentation</a></li>
   </ul> 
    
 
