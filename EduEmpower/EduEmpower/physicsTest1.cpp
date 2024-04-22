@@ -410,38 +410,42 @@ void physicsTest1() {
         }
 
         // Draw next question button or check button based on the current question
-        if (currentQuestionIndex < allQuestions.size() - 1) {
+        if (currentQuestionIndex < 19) { // Change to 19 because we're starting from 0
             DrawRectangle(buttonX + buttonWidth - 100, buttonY + 800, 100, 50, GREEN);
             DrawText("Next", buttonX + buttonWidth - 90, buttonY + 815, 20, BLACK);
+
+            // Check if the next button is pressed
+            if (CheckCollisionPointRec(GetMousePosition(), { static_cast<float>(buttonX + buttonWidth - 100), static_cast<float>(buttonY + 800), 100.0f, 50.0f }) && isButtonPressed) {
+                currentQuestionIndex++;
+                isButtonPressed = false; // Reset button press flag
+            }
         }
         else {
             DrawRectangle(buttonX + buttonWidth - 100, buttonY + 800, 100, 50, GREEN);
             DrawText("Check", buttonX + buttonWidth - 110, buttonY + 815, 20, BLACK);
-        }
 
-        // Check if the next button is pressed
-        if (CheckCollisionPointRec(GetMousePosition(), { static_cast<float>(buttonX + buttonWidth - 100), static_cast<float>(buttonY + 800), 100.0f, 50.0f }) && isButtonPressed && currentQuestionIndex == allQuestions.size() - 1) {
-            // Calculate points
+            // Check if the check button is pressed
+            if (CheckCollisionPointRec(GetMousePosition(), { static_cast<float>(buttonX + buttonWidth - 100), static_cast<float>(buttonY + 800), 100.0f, 50.0f }) && isButtonPressed) {
+                // Calculate points
 
-            currentQuestionIndex++;
-
-            int numCorrectAnswers = 0;
-            for (size_t i = 0; i < allQuestions.size(); ++i) {
-                if (selectedAnswers[i] == allQuestions[i].rightAnswerIndex) {
-                    numCorrectAnswers++;
+                int numCorrectAnswers = 0;
+                for (size_t i = 0; i < 20; ++i) { // Change to 20 because we're using 20 questions
+                    if (selectedAnswers[i] == allQuestions[i].rightAnswerIndex) {
+                        numCorrectAnswers++;
+                    }
                 }
+
+                // Print total points
+                totalPoints = numCorrectAnswers * 10; // Assuming each correct answer is worth 10 points
+                std::cout << "Total Points: " << totalPoints << std::endl;
+
+                isButtonPressed = false; // Reset button press flag
             }
-
-            // Print total points
-            totalPoints = numCorrectAnswers * 10; // Assuming each correct answer is worth 10 points
-            std::cout << "Total Points: " << totalPoints << std::endl;
-
-            isButtonPressed = false; // Reset button press flag
         }
 
         int xPos = x;
         int yPos = 200; // Start position for the first question, adjusted to be lower
-        for (int i = currentQuestionIndex; i < currentQuestionIndex + numQuestionsToDisplay && i < allQuestions.size(); i++) {
+        for (int i = currentQuestionIndex * 20; i < (currentQuestionIndex + 1) * 20 && i < 50; i++) { // Change to select 20 questions
             displayQuestion(allQuestions[i], xPos, yPos, 30); // Increased font size to 30
             displayRadioButtons(xPos, yPos, selectedAnswers[i], i + 1, 20, true, selectedAnswers); // Changed font size to 20 and pass true for clickable
 
@@ -449,7 +453,7 @@ void physicsTest1() {
         }
 
         // Display index of the current questions
-        DrawText(TextFormat("Questions %d to %d / %d", currentQuestionIndex + 1, std::min(currentQuestionIndex + numQuestionsToDisplay, static_cast<int>(allQuestions.size())), allQuestions.size()), screenWidth - 250, screenHeight - 50, 20, WHITE);
+        DrawText(TextFormat("Questions %d to %d / 20", currentQuestionIndex * 20 + 1, std::min((currentQuestionIndex + 1) * 20, 50)), screenWidth - 250, screenHeight - 50, 20, WHITE);
 
         EndDrawing();
     }
