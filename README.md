@@ -14,7 +14,7 @@
 </p> 
 
 ## 📋 Description
-
+Our app is designed to improve the education system and support learning in areas such as mathematics, physics and programming. The application is provided with courses both for training, provided with lessons and examples, according to the given lesson. There are also sections for testing and practicing new knowledge, where students will be able to check what percentage they are doing in the course in which they have decided to test their knowledge.
 
 ## 🚀 Languages and Libraries
 <p align="left">
@@ -78,5 +78,5 @@ https://github.com/codingburgas/school-project-assignment-eduempower.git
 
 ## 🎮 EduEmpower
 
-<img height="600" width="1050" src = ""/>
+<img height="600" width="1050" alt = ""/>
 <img height="600" width="1050" src = ""/>
