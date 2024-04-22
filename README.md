@@ -78,5 +78,5 @@ https://github.com/codingburgas/school-project-assignment-eduempower.git
 
 ## 🎮 EduEmpower
 
-<img height="600" width="1050" alt = "backgraound_mathematics_main_page"/>
-<img height="600" width="1050" src = "background_physics_main_page"/>
+<img height="600" width="1050" src = "EduEmpower/resources/backgraound_mathematics_main_page.png"/>
+<img height="600" width="1050" src = "EduEmpower/resources/background_physics_main_page.png"/>
