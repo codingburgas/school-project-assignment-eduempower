@@ -39,7 +39,7 @@ Our app is designed to improve the education system and support learning in area
  
 <h4>Documents</h4>
   <ul>
-    <li><a href="Documentation/EduEmpower_documentation.doch">Documentation</a></li>
+    <li><a href="Documentation/EduEmpower_documentation.docx">Documentation</a></li>
     <li><a href="Documentation/EduEmpower_QA.xlsx">QA Table</a></li>
   </ul> 
 <h4>Presenting</h4>
